@@ -1,6 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: false,
+  reactStrictMode: true,
+  swcMinify: true,
+  experimental: {
+    images: {
+      unoptimized: true,
+    },
+  },
+  assetPrefix: "./",
 };
 
-module.exports = { nextConfig, images: { loader: "custom" } };
+module.exports = nextConfig;
